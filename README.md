@@ -20,10 +20,14 @@ Please make sure to not use tab (\t) while editing yaml files. You may want to v
 1. Configure the Bamboo servers by editing the config.yaml file in `<MACHINE_AGENT_HOME>/monitors/BambooMonitor/conf`.
 
      ```
-        servers:
-          - uri: https://localhost:8443/rest/api/latest/result.json?os_authType=basic&expand=results.result
-            displayName: Local Bamboo
+      servers:
+        # Fires a REST request to https://localhost:8443/rest/api/latest/result.json?os_authType=basic&expand=results.result to get latest test results
+          - displayName: Local Bamboo
+            host: localhost
+            port: 8443
+            useSSL: true
             username:
+            #Provide password or passwordEncrypted and encryptionKey
             password:
             passwordEncrypted:
 
@@ -40,14 +44,14 @@ Please make sure to not use tab (\t) while editing yaml files. You may want to v
           sslVerifyHostname: false
           sslProtocols: ["TLSv1"]
 
-
         taskSchedule:
           numberOfThreads: 1
+          # Fires REST api every taskDelaySeconds seconds and caches the results to display every minute
           taskDelaySeconds: 120
 
 
         #prefix used to show up metrics in AppDynamics
-        metricPrefix: "Custom Metrics|Bamboo|"
+        metricPrefix: "Custom Metrics|Bamboo|"  
     ```
 
 
