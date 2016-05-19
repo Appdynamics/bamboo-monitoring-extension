@@ -91,7 +91,7 @@ In metric browser metrics will be displayed in [Custom Metrics|Bamboo|{displayNa
 |Build Number    | 
 
 ## Custom Dashboard ##
-![]()
+![](https://github.com/Appdynamics/bamboo-monitoring-extension/blob/master/Bamboo_Dashboard.png?raw=true)
 
 ## Troubleshooting ##
 
