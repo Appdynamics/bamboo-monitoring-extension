@@ -1,0 +1,28 @@
+servers:
+  - uri: https://localhost:8443/rest/api/latest/result.json?os_authType=basic&expand=results.result
+    displayName: Local Bamboo
+    username: sathi42000
+    password:
+    passwordEncrypted: fZAUE3XWqrGBgVEC3lddBw==
+
+
+encryptionKey: welcome
+
+# number of concurrent tasks
+numberOfThreads: 5
+
+connection:
+  socketTimeout: 2000
+  connectTimeout: 2000
+  sslCertCheckEnabled: false
+  sslVerifyHostname: false
+  sslProtocols: ["TLSv1"]
+
+
+taskSchedule:
+  numberOfThreads: 1
+  taskDelaySeconds: 120
+
+
+#prefix used to show up metrics in AppDynamics 
+metricPrefix: "Custom Metrics|Bamboo|"

@@ -1,0 +1,25 @@
+<monitor>
+    <name>Bamboo-monitor</name>
+    <type>managed</type>
+    <description>Bamboo Monitoring Extension</description>
+    <monitor-configuration></monitor-configuration>
+    <monitor-run-task>
+        <execution-style>periodic</execution-style>
+        <execution-frequency-in-seconds>60</execution-frequency-in-seconds>
+        <name>Bamboo Monitor Run task</name>
+        <display-name>Bamboo Monitor Run task</display-name>
+        <description>Bamboo Monitor Run task</description>
+        <type>java</type>
+        <execution-timeout-in-secs>60</execution-timeout-in-secs>
+        
+		<task-arguments>
+			<argument name="config-file" is-required="true" default-value="monitors/BambooMonitor/conf/config.yaml" />
+		</task-arguments>
+            
+        <java-task>
+            <classpath>bamboo-monitoring-extension.jar</classpath>
+            <impl-class>com.appdynamics.extensions.bamboo.BambooMonitor</impl-class>
+        </java-task>
+        
+    </monitor-run-task>
+</monitor>
