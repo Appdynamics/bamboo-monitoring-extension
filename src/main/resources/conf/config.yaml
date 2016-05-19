@@ -1,12 +1,12 @@
 servers:
   - uri: https://localhost:8443/rest/api/latest/result.json?os_authType=basic&expand=results.result
     displayName: Local Bamboo
-    username: sathi42000
+    username:
     password:
-    passwordEncrypted: fZAUE3XWqrGBgVEC3lddBw==
+    passwordEncrypted:
 
 
-encryptionKey: welcome
+encryptionKey:
 
 # number of concurrent tasks
 numberOfThreads: 5
