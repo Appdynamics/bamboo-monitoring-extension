@@ -68,7 +68,27 @@ You can also change the frequency at which the MachineAgent calls the extension 
     ```
 
     On Windows, please specify the absolute path to the config.yml.
+    
+##Password Encryption Support
+To avoid setting the clear text password in the config.yaml, please follow the process below to encrypt the password
 
+1. Download the util jar to encrypt the password from [https://github.com/Appdynamics/maven-repo/blob/master/releases/com/appdynamics/appd-exts-commons/1.1.2/appd-exts-commons-1.1.2.jar](https://github.com/Appdynamics/maven-repo/blob/master/releases/com/appdynamics/appd-exts-commons/1.1.2/appd-exts-commons-1.1.2.jar) and navigate to the downloaded directory
+2. Encrypt password from the commandline
+`java -cp appd-exts-commons-1.1.2.jar com.appdynamics.extensions.crypto.Encryptor encryptionKey myPassword`
+3. Specify the passwordEncrypted and encryptionKey in config.yaml    
+
+## Metrics
+
+In metric browser metrics will be displayed in [Custom Metrics|Bamboo|{displayName}|{projectName}|{planName}|{metricName}
+
+|Metric Name            	|
+|------------------------------	|
+|Build Duration in Sec				|	
+|Failed Tests					|
+|Quarantined Tests					|
+|Skipped Tests    | 
+|Successful Tests    | 
+|Build Number    | 
 
 ## Custom Dashboard ##
 ![]()
