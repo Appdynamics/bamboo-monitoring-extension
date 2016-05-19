@@ -67,7 +67,8 @@ public class BambooMetricFetcher implements Runnable {
     }
 
     private BambooResult getResponse() {
-        String url = UrlBuilder.fromYmlServerConfig(server).build();
+        UrlBuilder urlBuilder = UrlBuilder.fromYmlServerConfig(server).path("rest/api/latest/result.json?os_authType=basic&expand=results.result");
+        String url = urlBuilder.build();
         CloseableHttpResponse response = null;
         try {
             CloseableHttpClient httpClient = configuration.getHttpClient();
@@ -88,6 +89,7 @@ public class BambooMetricFetcher implements Runnable {
                 try {
                     response.close();
                 } catch (IOException e) {
+                    logger.error("Exception while closing the response", e);
                 }
             }
         }
