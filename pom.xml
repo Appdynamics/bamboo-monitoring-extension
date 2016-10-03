@@ -156,6 +156,9 @@
                                     <fileset dir="${build.directory}"
                                              includes="${project.artifactId}.${project.packaging}" />
                                 </copy>
+                                <copy todir="${target.dir}">
+                                    <fileset dir="${project.basedir}" includes="LICENSE.txt"/>
+                                </copy>
                                 <zip destfile="${target.dir}-${project.version}.zip">
                                     <zipfileset dir="${target.dir}" filemode="755"
                                                 prefix="BambooMonitor/" />
