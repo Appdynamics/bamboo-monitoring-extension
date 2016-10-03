@@ -1,7 +1,7 @@
 <monitor>
     <name>Bamboo-monitor</name>
     <type>managed</type>
-    <description>Bamboo Monitoring Extension</description>
+    <description>AppDynamics Monitoring Extension for use with Atlassian Bamboo</description>
     <monitor-configuration></monitor-configuration>
     <monitor-run-task>
         <execution-style>periodic</execution-style>

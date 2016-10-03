@@ -1,5 +1,5 @@
-Atlassian Bamboo Monitoring Extension
-====================================
+AppDynamics Monitoring Extension for use with Atlassian Bamboo
+===============================================================
 
 ## Introduction ##
 
